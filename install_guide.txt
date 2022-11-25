@@ -1,0 +1,16 @@
+## 1. create python3 environment with anaconda (this will take a long time)
+
+conda create -n rocknet python==3.7.3 anaconda
+
+conda activate rocknet
+
+## 2. Install the packages with pip
+
+pip install --upgrade pip
+
+pip install -r ./requirements.txt --ignore-installed
+
+
+## To remove the whole environment, you may use the following command
+# conda deactivate
+# conda env remove -n rocknet
