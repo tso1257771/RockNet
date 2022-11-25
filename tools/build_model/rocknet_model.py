@@ -1,4 +1,4 @@
-from rocknet_1sta_model import fusion_unet, wf_unet
+from rocknet_1sta_model import fusion_unet
 from rocknet_associate_model import associate_net
 
 class RockNet:
