@@ -33,7 +33,7 @@ The data seismograms were collected in the Luhu tribe, Miaoli county, Taiwan.<br
 
 Enter the directory  ```./Luhu_pred_ex```<br />
 ```bash
-cd ./Luhu_pred_e
+cd ./Luhu_pred_ex
 ```
 1. Run script ```Luhu_pred_ex/P01_net_STMF.py``` to generate the output functions (also in SAC format) in ```Luhu_pred_ex/net_pred``` from the provided SAC files ```Luhu_pred_ex/sac```<br />
 ```
