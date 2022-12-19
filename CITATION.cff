@@ -1,0 +1,10 @@
+@software{RockNet_2022,
+  author = {Liao, Wuyu},
+  title        = {RockNet: Rockfall and earthquake detection and association via multitask learning and transfer learning}
+  month        = dec,
+  year         = 2022,
+  publisher    = {Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.7458411},
+  url          = {https://doi.org/10.5281/zenodo.7458411}
+}
