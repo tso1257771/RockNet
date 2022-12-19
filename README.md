@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/565642324.svg)](https://zenodo.org/badge/latestdoi/565642324)
 # RockNet
 Rockfall and earthquake detection and association via multitask learning and transfer learning
 
