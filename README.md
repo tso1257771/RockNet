@@ -4,6 +4,10 @@ Rockfall and earthquake detection and association via multitask learning and tra
 
 ![2020-03-28T13:41:20 00](https://user-images.githubusercontent.com/30610646/203888301-ba149105-6701-43b7-a2fe-8c7be1852894.png)
 
+## Complete dataset
+Please also download the complete data hosted on Dryad (https://zenodo.org/badge/latestdoi/565642324),
+follow the instructions and place the files to specified directories in this repository.
+
 ## Summary
 
 * [Installation](#installation)
