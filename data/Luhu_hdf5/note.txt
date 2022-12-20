@@ -1,0 +1,64 @@
+﻿This readme file was generated on [2021-11-21] by [Wuyu Liao]
+
+File List: 
+.
+├── README.txt					 --> This file.
+├── h52sac.py					 --> Convert data in Luhu_dataset.h5 to Seismic Analysis Code (SAC) format
+├── Luhu_dataset.h5				 --> The compiled dataset formatted in hdf5 format.
+└── requirements.txt				 --> List of python packages required to execute h52sac.py 
+
+
+## Hierarchical format of Luhu_dataset.h5
+# WAVEFORM_TYPE/EVENT_ID/WAVEFORM_ID/[DATA]
+#                                   /[SAC_HEADER_ATTRIBUTE_1]
+#                                   /[SAC_HEADER_ATTRIBUTE_N]
+#				    ...
+
+├──Luhu_dataset.h5
+├────EQ/2019203160619/TW.LH01.EHE.00.2019057130404/[DATA]: [7, 12, 4, ...]
+│             ...                                 /[npts]: 18000 
+│                                                 /[station]: 'LH01' 
+│                                                      ...
+│ 
+├────car_multiple_sta_label/...
+├────engineering/...
+├────RF_multiple_sta_label/...
+└────RF_single_sta_label/...
+#
+##
+
+
+Relationship between files: 
+
+# 1. Prepare required python packages for accessing the data 
+
+> pip -r install requirements.txt
+
+# 2. Execute `h52sac.py` program to generate SAC files from `Luhu_dataset.h5` file.
+
+> python h52sac
+
+This will generate the directory `../data/labeled_sac` as follows:
+
+├── labeled_sac					 --> Converted SAC files by `h52sac.py` and `Luhu_dataset.h5`, categorized by different seismic sources.
+    ├── car_multiple_sta_label			 --> Car-induced signal with manual labels.
+    │   ├── 2019057130404			 --> Event directory of SAC files named by waveform start time (YEAR-JULDAY-HOUR-MINUTE-SECOND) 
+    │   │   ├── TW.LH01.EHE.00.2019057130404.sac --> E component SAC file
+    │   │   ├── TW.LH01.EHN.00.2019057130404.sac --> N component SAC file
+    │   │   ├── TW.LH01.EHZ.00.2019057130404.sac --> Z component SAC file
+    │   │   │ ... 
+    │   ├── 2019058115014
+    │   │   ├── TW.LH01.EHE.00.2019058115014.sac
+    │   │   ├── TW.LH01.EHN.00.2019058115014.sac
+    │   │   ├── TW.LH01.EHZ.00.2019058115014.sac
+    │   │   │ ...
+    ├── engineering				 --> Engineering signal with manual labels.
+    │   ├── ...
+    ├── EQ					 --> Earthquake signal with manual labels.
+    │   ├── ...
+    ├── RF_multiple_sta_label			 --> Rockfall signal with manual labels on multiple stations.
+    │   ├── ...
+    └───RF_single_sta_label			 --> Rockfall signal with manual labels on only one stations.
+        ├── ...
+
+

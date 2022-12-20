@@ -1,0 +1,37 @@
+.
+├── Luhu_hdf5             	--> Access this directory, and generate `./labeled_sac` from the compiled hdf5 file `Luhu_dataset.h5`.
+├── gen_TFRecord          	--> Generate TFRecord files for training models and performin benchmark from files in `./labeled_sac`.
+├── metadata              	--> Label information and data partition files.
+├── tfrecord_Association  	--> Produced by codes in `gen_TFRecord`, containing TFRecords for for the association model.
+│   ├── car_multiple_sta_label  --> Pre-produced TFrecord for reproducing benchmark results for the association model.
+│   │   └── test          	--> Pre-produced TFrecord of four types of seismic source (car, engineering, earthquake, and rockfall) for benchmarking.
+│   ├── engineering
+│   │   └── test
+│   ├── EQ
+│   │   └── test
+│   └── RF_multiple_sta_label
+│       └── test
+├── tfrecord_SingleSta    	--> Produced by codes in `gen_TFRecord`, containing TFRecords for the single-station detection model.
+│   ├── car               
+│   │   └── test
+│   ├── engineering
+│   │   └── test
+│   ├── EQ
+│   │   └── test
+│   └── RF_multiple_sta_label
+│       └── test
+└── README.txt
+
+## Note
+1. The `tfrecord_Association/car` and `tfrecord_Association/engineering` contains all training, validation, test data used in the study.
+Since the reproduction of these files need all the hourly-long continuous data, which is not available now.
+
+2. The variable names (column titles) of all csv files in ./metadata are described as follows:
+
+	id 			: The id of the events.
+	station 		: Available station name of the events.
+	labeled_across_stations : Identified as "True" if multiple labels were made over various stations for a single event.
+	labels_per_station 	: Number of the labeled waveform of the single-station recordings.
+	trace_starttime 	: Start time of the data in UTC(+0).
+	trace_endtime		: End time of the data in UTC(+0).
+
