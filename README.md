@@ -1,6 +1,7 @@
 [![DOI](https://zenodo.org/badge/565642324.svg)](https://zenodo.org/badge/latestdoi/565642324)
 # RockNet
 Rockfall and earthquake detection and association via multitask learning and transfer learning
+Our preprint article can be found [here](https://essopenarchive.org/doi/full/10.22541/essoar.167160646.63337688/v1).
 
 ![2020-03-28T13:41:20 00](https://user-images.githubusercontent.com/30610646/203888301-ba149105-6701-43b7-a2fe-8c7be1852894.png)
 
